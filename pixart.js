@@ -8,15 +8,26 @@ HINT: You will notice that the page refreshes whenever you click the button. You
 Commit 2
 The same thing should happen when I press the enter key from inside the input field
 */
+/*
+Commit 3
+Create 20 divs of the "square" class and append them to the body
+Hint: use .appendChild()
+*/
 
-
-let setColorBtn = document.querySelector("#set-color")
-let colorField = document.querySelector("#color-field")
-let brushColor = document.querySelector(".brush")
+const setColorBtn = document.querySelector("#set-color")
+const colorField = document.querySelector("#color-field")
+const brushColor = document.querySelector(".brush")
 
 function noRefresh(event) {
     event.preventDefault();
     brushColor.style.backgroundColor = colorField.value
+}
+
+
+for(let i = 0; i<20; i++) {
+    const div = document.createElement("div")
+    div.classList.add("square")
+    document.body.append(div)
 }
 
 // always invoke preventDefault in the first line inside the function
