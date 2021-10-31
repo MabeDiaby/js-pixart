@@ -14,9 +14,16 @@ Create 20 divs of the "square" class and append them to the body
 Hint: use .appendChild()
 */
 
+/*
+Commit 4
+Add functionality so that when I click on each "square", it changes the color of that individual square to "green"
+Hint: either add the event listener while creating the squares, or listen for events on the body element
+*/
+
 const setColorBtn = document.querySelector("#set-color")
 const colorField = document.querySelector("#color-field")
 const brushColor = document.querySelector(".brush")
+const div = document.querySelectorAll(".square")
 
 function noRefresh(event) {
     event.preventDefault();
@@ -27,8 +34,12 @@ function noRefresh(event) {
 for(let i = 0; i<20; i++) {
     const div = document.createElement("div")
     div.classList.add("square")
+    div.addEventListener('click', () => {
+        div.style.backgroundColor = "green"
+    })
     document.body.append(div)
 }
+
 
 // always invoke preventDefault in the first line inside the function
 
