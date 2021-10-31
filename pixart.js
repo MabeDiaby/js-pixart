@@ -23,7 +23,13 @@ Hint: either add the event listener while creating the squares, or listen for ev
 Commit 5
 Modify your code so that when I click on each "square", it changes to the color I set using my input instead of "green" every time.
 */
-
+/*
+Commit 6
+1. Modify the CSS so that the "square" class has a height and width of 10px and a margin of 0.
+2. Modify your code so that you are creating 8000 divs instead of 20.
+3. Change the event that changes your box colors from 'click' to 'mouseover'
+4. Paint a picture!
+*/
 const setColorBtn = document.querySelector("#set-color")
 const colorField = document.querySelector("#color-field")
 const brushColor = document.querySelector(".brush")
@@ -35,10 +41,10 @@ function noRefresh(event) {
 }
 
 
-for(let i = 0; i<20; i++) {
+for(let i = 0; i<8000; i++) {
     const div = document.createElement("div")
     div.classList.add("square")
-    div.addEventListener('click', () => {
+    div.addEventListener('mouseover', () => {
         div.style.backgroundColor = colorField.value
     })
     document.body.append(div)
