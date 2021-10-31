@@ -19,6 +19,10 @@ Commit 4
 Add functionality so that when I click on each "square", it changes the color of that individual square to "green"
 Hint: either add the event listener while creating the squares, or listen for events on the body element
 */
+/*
+Commit 5
+Modify your code so that when I click on each "square", it changes to the color I set using my input instead of "green" every time.
+*/
 
 const setColorBtn = document.querySelector("#set-color")
 const colorField = document.querySelector("#color-field")
@@ -35,7 +39,7 @@ for(let i = 0; i<20; i++) {
     const div = document.createElement("div")
     div.classList.add("square")
     div.addEventListener('click', () => {
-        div.style.backgroundColor = "green"
+        div.style.backgroundColor = colorField.value
     })
     document.body.append(div)
 }
