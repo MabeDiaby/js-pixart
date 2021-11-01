@@ -30,6 +30,11 @@ Commit 6
 3. Change the event that changes your box colors from 'click' to 'mouseover'
 4. Paint a picture!
 */
+/*
+Bomus
+1. Add a color swatch. You should have 3 boxes with the most recent 3 colors used. When you click on each of those boxes, it should set the current brush color back to that color.
+2. Refactor your code using event propogation.
+*/
 const setColorBtn = document.querySelector("#set-color")
 const colorField = document.querySelector("#color-field")
 const brushColor = document.querySelector(".brush")
@@ -41,7 +46,7 @@ function noRefresh(event) {
 }
 
 
-for(let i = 0; i<8000; i++) {
+for (let i = 0; i<8000; i++) {
     const div = document.createElement("div")
     div.classList.add("square")
     div.addEventListener('mouseover', () => {
@@ -49,8 +54,5 @@ for(let i = 0; i<8000; i++) {
     })
     document.body.append(div)
 }
-
-
-// always invoke preventDefault in the first line inside the function
 
 setColorBtn.addEventListener("click", noRefresh)
